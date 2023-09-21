@@ -20,7 +20,6 @@ Sau khi khởi động, 3 cửa sổ terminal hiện ra. Lần lượt login the
 - Trên terminal Bob, cho phép Alice đọc file `/shared_data/bob/bobstuff.txt` bằng lệnh: `setfacl -m "u:alice:r" /shared_data/bob/bobstuff.txt`
 - Nhập lệnh `cat /shared_data/bob/bobstuff.txt` trên terminal của Alice và Harry để xác nhận Alice có quyền đọc file này còn Harry thì không
 ## Nhiệm vụ 3 ##
-- Trên terminal Alice, tạo file mới trong `/shared_data/alice` bằng lệnh: `touch ./alice/test.txt`
 - Nhập lệnh sau để cho phép ngoài Alice chỉ có Bob mới đọc được các file mới tạo:
 
 `setfacl -dm "u:bob:r" /shared_data/alice/`
@@ -36,7 +35,7 @@ Sau khi khởi động, 3 cửa sổ terminal hiện ra. Lần lượt login the
 - Lần lượt nhập thử lệnh sau trên terminal của Bob và Harry để kiểm tra quyền của họ: `cat /shared_data/alice/attt.txt`
 
 ## Nhiệm vụ 4 ##
-Nhiệm vụ yêu cầu chúng ta sửa script `fun` sao cho khi Alice chạy thì nó sẽ tạo ra một bản sao của `accounting.txt` để Bob có thể đọc được. Hãy để ý rằng ở nhiệm vụ 2 Alice đã cho Bob quyền đọc các file trong `/shared_data/alice`. Như vậy chúng ta chỉ cần chèn lệnh để Alice copy nội dung file `accounting.txt` vào thư mục `/shared_data/alice`: `cp /shared_data/accounting.txt /shared_data/alice/hacked.txt`
+Nhiệm vụ yêu cầu chúng ta sửa script `fun` sao cho khi Alice chạy thì nó sẽ tạo ra một bản sao của `accounting.txt` để Bob có thể đọc được. Hãy để ý rằng ở nhiệm vụ 2 Alice đã cho Bob quyền đọc các file trong `/shared_data/alice`. Như vậy chúng ta chỉ cần chèn lệnh để Alice copy nội dung file `accounting.txt` vào thư mục `/shared_data/alice`: `cp /shared_data/accounting.txt /shared_data/alice/hacked.txt`. Lệnh cp sẽ copy nội dung file accounting.txt vào một file mới tên là hacked.txt
 
 Ở đây mình dùng lệnh nano để sửa nội dung script `fun`: `nano /shared_data/bob/fun`. Khi nội dung file hiện lên màn hình, mình thực hiện chèn câu lệnh trên
 ![image](https://user-images.githubusercontent.com/108949637/269648266-431bc067-5273-4c2b-8c01-2aee3b5cf55c.png)
