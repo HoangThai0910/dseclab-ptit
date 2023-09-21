@@ -5,7 +5,7 @@ Sau khi khởi động, 3 cửa sổ terminal hiện ra. Lần lượt login the
 ![image](https://user-images.githubusercontent.com/108949637/269626662-9f7fae5c-51d1-478e-82b5-456242074e7e.png)
 
 ## Nhiệm vụ 1 ##
-- Trên terminal Alice, nhập các lệnh sau để đến thư mục /shared_data và liệt kê các quyền trên file:
+- Trên terminal Alice, nhập các lệnh sau để đến thư mục `/shared_data` và liệt kê các quyền trên file:
 
   `cd /shared_data`
 
