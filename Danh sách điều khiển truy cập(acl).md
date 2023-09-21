@@ -11,7 +11,7 @@ Sau khi khởi động, 3 cửa sổ terminal hiện ra. Lần lượt login the
 
   `ls -l`
 
-- Kiểm tra Alice có thể đọc file accounting.txt không, dùng lệnh cat để đọc file: cat accounting.txt
+- Kiểm tra Alice có thể đọc file accounting.txt không, dùng lệnh cat để đọc file: `cat accounting.txt`
 - Nhìn lại danh sách quyền truy cập các file. Với file accounting.txt có cài đặt quyền là: `-rw-rw----+`
 - Biểu tượng + ở cuối cho biết tệp này có thêm quản lý bằng ACL ngoài các quyền UNIX tiêu chuẩn của "rw" cho người dùng và nhóm người dùng. Dùng lệnh sau để kiểm tra quyền ACL của file: `getfacl accounting.txt`
 - Chú ý có 1 trong 3 người dùng có quyền sửa đổi file `passcode.txt`, chuyển đến terminal của người đó nhập lệnh: `echo "more stuff" >> /shared_data/accounting.txt`
