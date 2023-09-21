@@ -19,7 +19,9 @@ Sau khi khởi động, 3 cửa sổ terminal hiện ra. Lần lượt login the
 `echo "more stuff" >> /shared_data/accounting.txt`
 - Quay lại terminal Alice, nhập thử lệnh `echo "test" >> /shared_data/accounting.txt` để xác nhận Alice không có quyền sửa đổi file này
 ## Nhiệm vụ 2 ##
-- Trên terminal Bob, cho phép Alice đọc file `/shared_data/bob/bobstuff.txt` bằng lệnh: `setfacl -m "u:alice:r" /shared_data/bob/bobstuff.txt`
+- Trên terminal Bob, cho phép Alice đọc file `/shared_data/bob/bobstuff.txt` bằng lệnh:
+
+`setfacl -m "u:alice:r" /shared_data/bob/bobstuff.txt`
 - Nhập lệnh `cat /shared_data/bob/bobstuff.txt` trên terminal của Alice và Harry để xác nhận Alice có quyền đọc file này còn Harry thì không
 ## Nhiệm vụ 3 ##
 - Nhập lệnh sau để cho phép ngoài Alice chỉ có Bob mới đọc được các file mới tạo:
